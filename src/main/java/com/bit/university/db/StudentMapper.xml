@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="student">
+  <select id="getStudent" resultType="student_vo">
+    select
+	    STD_NO,
+		STD_EMAIL,
+		STD_NAME,
+		STD_GENDER,
+		STD_BIRTHDAY,
+		STD_LEVEL,
+		STD_SEMESTER,
+		STD_STATUS,
+		STD_STARTDATE,
+		STD_ENDDATE,
+		STD_ETC,
+		PRO_NO,
+		STD_FNAME,
+		STD_MAJOR,
+    	major_name,
+    	college_name
+   	from student, major m, college c
+   	where std_no=#{std_no}
+   			and std_major= m.major_no
+   			and m.college_no= c.college_no
+  </select>    
+</mapper>

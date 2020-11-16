@@ -1,0 +1,19 @@
+@import "reset.css";
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+li{
+	float: left;
+	list-style: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+
+.table {
+	border-bottom : 1px solid #d1d1d1
+	
+}
